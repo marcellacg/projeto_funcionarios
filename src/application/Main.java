@@ -66,6 +66,7 @@ public class Main {
             System.out.print("Digite o nome: ");
             String nomeRemover = sc.next();
 
+            System.out.println("teste");
             for (int i = 0; i < listaFuncionarios.size(); i++) {
 
                 Funcionario funcionario = listaFuncionarios.get(i);
