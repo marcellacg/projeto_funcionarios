@@ -46,7 +46,7 @@ public class Main {
             System.out.println("Adicionar outro funcionário? [S/N]: ");
             respostaFinal = sc.next();
 
-        } while (!respostaFinal.equalsIgnoreCase("N"));
+        }
 
 
 
@@ -54,7 +54,7 @@ public class Main {
         for (Funcionario funcionario : listaFuncionarios) {
             printInformacoes(funcionario);
         }
-        System.out.print("-------------------------------------------------------------");
+        printSeparador();
         System.out.print("\nDeseja remover um funcionário? [S/N]: ");
 
         String resposta = sc.next();
@@ -121,7 +121,8 @@ public class Main {
 
             //Dificuldade em pegar a idade mais antiga
             for (Funcionario funcionarioAno : listaFuncionarios) {
-                System.out.print("\n" + funcionarioAno.getNome() + "    " + funcionarioAno.getIdade(funcionarioAno));
+                System.out.print("\n" + funcionarioAno.getNome() + "    " +
+                        funcionarioAno.getIdade(funcionarioAno));
             }
 
 
@@ -152,9 +153,11 @@ public class Main {
                 double salarioFuncionario = funcionarioQntSalario.getSalario();
 
                 if (salarioFuncionario < 1212.00){
-                    System.out.print("\n" + funcionarioQntSalario.getNome() + " ganha menos de um salário minimo.");
+                    System.out.print("\n" + funcionarioQntSalario.getNome() +
+                            " ganha menos de um salário minimo.");
                 } else {
-                    System.out.printf("\n%s ganha pelo menos %.0f salário(s) mínimo(s)", funcionarioQntSalario.getNome(),
+                    System.out.printf("\n%s ganha pelo menos %.0f salário(s) mínimo(s)",
+                            funcionarioQntSalario.getNome(),
                             funcionarioQntSalario.qntSalariosMinimos());
                 }
 
